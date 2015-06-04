@@ -10,10 +10,18 @@
                 "element": {"#": "owner"}
             }
         },
+        "backgroundImage": {
+            "prototype": "ui/background-image.reel",
+            "properties": {
+                "element": {"#": "backgroundImage"}
+            },
+            "bindings": {
+                "src": {"<-": "@owner.post.featured_image.source"}
+            }
+        },
         "image": {
             "prototype": "digit/ui/image.reel",
             "properties": {
-                "element": {"#": "image"},
                 "crossOrigin": null
             },
             "bindings": {
@@ -36,7 +44,7 @@
 <body>
     <div data-montage-id="owner" class="Card">
         <div class="Card-face Card-face--front">
-            <img data-montage-id="image" class="Card-image">
+            <div data-montage-id="backgroundImage"></div>
             <div class="Card-caption">
                 <p data-montage-id="text1" class="Card-title"></p>
             </div>
@@ -47,5 +55,3 @@
     </div>
 </body>
 </html>
-
-
