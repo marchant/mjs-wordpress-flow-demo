@@ -1,6 +1,6 @@
 var Component = require("montage/ui/component").Component;
 
-exports.Image = Component.specialize( {
+exports.BackgroundImage = Component.specialize( {
 
     _src: {
         value: null
